@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <title>Warteg Online : Pesan, Antar, Makan</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body onresize="getSize()">
+    <nav id="bar">
+        <button id="btn-menu">
+            <i class="icon ion-navicon-round"></i>
+        </button>
+        <h2 class="title">Warteg Online</h2>
+    </nav>
+    <div id="slide">
+        <button id="btn-menu-close"><i class="icon ion-android-arrow-back"></i></button>
+        <ul>
+            <li><a href="#pemesanan"><i class="icon ion-coffee"></i>Pesan Makanan</a></li>
+            <li><a href="#menu"><i class="icon ion-android-restaurant"></i>Menu Makanan</a></li>
+            <li><a href="#daftar-pesanan"><i class="icon ion-android-done-all"></i>Antrian Pesanan</a></li>
+            <li><a href="#about"><i class="icon ion-person"></i>About Us</a></li>
+            <li><a href=""><i class="icon ion-ios-telephone"></i>Contact Us</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="column four" id="daftar-pesanan">
+            <header>
+                <h2><i class="icon ion-clipboard"></i>DAFTAR PESANAN</h2>
+                <p>Anda lapar? Pesan sekarang juga kami akan mengantarkannya ke meja anda dalam waktu kurang dari 10 Menit</p>
+            </header>
+            <section>
+                <h3>Daftar Antrian Menunggu</h3>
+                <ul id="list-pesanan-menunggu">
+                </ul>
+            </section>
+        </div>
+        <div class="column four" id="pemesanan">
+            <header>
+                <h2><i class="icon ion-android-boat"></i>PESAN SEKARANG!</h2>
+                <p>Kami menerima antar jemput makanan 24 Jam. Kami juga menerima pesanan untuk kebutuhan skala besar </p>
+            </header>
+            <section>
+                <div class="card">
+                    <h3>Form Pemesanan</h3>
+                    <p>Masukan Pesanan Anda Di Form Bawah Ini!</p>
+                    <i class="icon ion-pizza"></i>
+                    <div class="form">
+                        <input type="text" onkeypress="enterPressTambah(event)" id="input-nama" placeholder="Masukan Nama Anda">
+                        <input list="makanan" onkeypress="enterPressTambah(event)" id="input-makanan" placeholder="Masukan Makanan Pesanan Anda">
+                        <datalist id="makanan">
+                        </datalist>
+                        <button id="add">PESAN MAKANAN +</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <p>Jika Anda Melakukan Kesalahan Ketika Menginput Pesanan, Harap Segera Perbaiki Di Bilik Kiri Website Ini, Dengan Menekan Tombol Edit </p>
+                </div>
+            </section>
+        </div>
+        <div class="column four" id="menu">
+            <header>
+                <ul>
+                    <li><a href=""><i class="icon ion-social-facebook"></i></a></li>
+                    <li><a href=""><i class="icon ion-social-twitter"></i></a></li>
+                    <li><a href=""><i class="icon ion-social-codepen"></i></a></li>
+                    <li>
+                        <button id="hireme">Hire Me!</button>
+                    </li>
+                </ul>
+            </header>
+            <section>
+                <h3>
+                  <i class="icon ion-fork"></i>
+                  MAKANAN
+                </h3>
+                <ul id="list-makanan">
+                </ul>
+                <h3>
+                  <i class="icon ion-beer"></i>
+                  MINUMAN
+                </h3>
+                <ul id="list-minuman">
+                </ul>
+            </section>
+        </div>
+    </div>
+    <!-- container -->
+    <!-- Template Engine - Mustache JS  -->
+    <template type="text/template" id="templateMenu">
+        <li>
+            <button data-value="{{nama}}" class="btn-add-menu">
+                <i class="icon ion-ios-plus-empty"></i>
+            </button>
+            <div class="desc">
+                <span>{{nama}}</span>
+                <span class="price">Rp {{harga}}</span>
+            </div>
+        </li>
+    </template>
+    <template type="text/template" id="datalist-option-makan">
+        <option value="{{nama}}"></option>
+    </template>
+    <template type="text/template" id="list-pesanan">
+        <li data-id="{{id_pesan}}">
+            <div class="card">
+                <div class="image">
+                    <img src="assets/img/photo(10).jpg" alt="">
+                </div>
+                <div class="description">
+                    <h4>
+                      Makanan : 
+                      <span class="nama-makanan noedit">{{pesanan}}
+                      </span>
+                      <input type="text" class="nama-makanan edit">
+                    </h4>
+                    <p>
+                        Nama Pemesan :
+                        <span class="nama-pemesan noedit">{{nama_pemesan}}</span>
+                        <input type="text" class="nama-pemesan edit">
+                    </p>
+                    <hr>
+                    <button class="btn-delete"><i class="icon ion-close-round"></i></button>
+                    <button class="btn-save edit">SAVE</button>
+                    <button class="btn-edit noedit">EDIT</button>
+                    <button class="btn-cancel edit">CANCEL</button>
+                </div>
+            </div>
+        </li>
+    </template>
+    <!-- End Templating Mustache JS  -->
+    <link rel="stylesheet" href="assets/css/nprogress.css" charset="utf-8">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/nprogress.js"></script>
+    <script src="assets/js/Mustache.min.js" charset="utf-8"></script>
+    <script src="assets/js/script.js" charset="utf-8"></script>
+</body>
+
+</html>

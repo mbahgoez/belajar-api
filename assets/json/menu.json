@@ -1,0 +1,23 @@
+{
+    "menu": {
+        "makanan": [
+            { "nama": "Nasi Goreng", "harga": 8000 },
+            { "nama": "Soto Ayam", "harga": 5000 },
+            { "nama": "Rendang", "harga": 10000 },
+            { "nama": "Mpek-Mpek", "harga": 10000 },
+            { "nama": "Bakso Ayam", "harga": 6000 },
+            { "nama": "Sate Ayam", "harga": 8000 },
+            { "nama": "Lalapan Lele", "harga": 10000 },
+            { "nama": "Ayam Kremes", "harga": 14000 },
+            { "nama": "Nasi Padang", "harga": 12000 },
+            { "nama": "Nasi Kuning", "harga": 6000 }
+        ],
+        "minuman": [
+            { "nama": "Es Teh", "harga": 2000 },
+            { "nama": "Es Jeruk", "harga": 3000 },
+            { "nama": "Soda Gembira", "harga": 5000 },
+            { "nama": "Kopi ABC susu", "harga": 2500 },
+            { "nama": "Teh Hangat", "harga": 2000 }
+        ]
+    }
+}

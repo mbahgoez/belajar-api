@@ -1,0 +1,10 @@
+live:
+    scheme: ftp
+    host: ftp.pusatdata.tk
+    port: 21
+    user: u945120114
+    pass: bagoes48bagoes48
+    check: true
+    path:
+        local: release/
+        remote: public_html/

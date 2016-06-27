@@ -1,0 +1,680 @@
+@import url(normalize.css);
+@keyframes bubble {
+  from {
+    letter-spacing: 0px; }
+  to {
+    letter-spacing: 5px; } }
+button:focus,
+a:focus,
+input:focus {
+  outline: none;
+  background: #eee;
+  color: #444; }
+
+div.loading {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #999; }
+  div.loading p {
+    display: block;
+    animation: bubble .3s infinite alternate; }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Tw Cen Mt', 'Segoe UI', sans-serif; }
+
+body {
+  background: #f8f8f8; }
+
+#bar,
+#slide,
+#overlay {
+  display: none; }
+
+.container {
+  width: 100%;
+  height: 100vh; }
+  .container::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.column {
+  overflow: hidden;
+  float: left;
+  box-shadow: 0 1px 1px 0 #ccc;
+  height: 100vh; }
+  .column.four {
+    width: 33.333333%; }
+
+header {
+  background: #fff;
+  width: 100%;
+  box-shadow: 0 1px 1px 0 #ccc;
+  width: 100%;
+  box-shadow: 0 1px 4px 0 #ccc;
+  z-index: 1;
+  position: relative;
+  padding: 10px;
+  padding-left: 30px; }
+  header::after {
+    clear: both;
+    content: "";
+    display: table; }
+  header h2 {
+    font-size: 24px; }
+    @media screen and (max-width: 1024px) {
+      header h2 {
+        font-size: 15px; } }
+    header h2 i {
+      margin-right: 10px; }
+  header p {
+    color: #999; }
+    @media screen and (max-width: 1024px) {
+      header p {
+        display: none; } }
+
+section {
+  height: 84%;
+  overflow-y: scroll;
+  padding-bottom: 50px; }
+  @media screen and (max-width: 1024px) {
+    section {
+      height: 91%; } }
+
+#pemesanan section {
+  padding: 10px; }
+  #pemesanan section .card {
+    background: #fff;
+    box-shadow: 0 1px 1px 0 #ccc;
+    padding: 30px 35px;
+    margin: 5px 0;
+    margin-bottom: 20px; }
+    #pemesanan section .card h3 {
+      text-transform: uppercase;
+      text-align: center;
+      color: #666;
+      letter-spacing: 4px; }
+    #pemesanan section .card .ion-pizza {
+      margin-top: 10px;
+      font-size: 50px;
+      display: block;
+      color: #999;
+      text-align: center; }
+      @media screen and (max-width: 1024px) {
+        #pemesanan section .card .ion-pizza {
+          font-size: 30px; } }
+    #pemesanan section .card p {
+      text-align: center;
+      color: #999; }
+      @media screen and (max-width: 1024px) {
+        #pemesanan section .card p {
+          font-size: 12px; } }
+    #pemesanan section .card input {
+      display: block;
+      padding: 10px 8px;
+      width: 100%;
+      margin: 10px 0;
+      border: none;
+      font-size: 20px;
+      box-shadow: 0 1px 0 0 #ccc;
+      transition: all .3s ease; }
+      #pemesanan section .card input:focus {
+        box-shadow: 0 1px 0 0 #37BDB2; }
+      @media screen and (max-width: 1024px) {
+        #pemesanan section .card input {
+          font-size: 12px; } }
+    #pemesanan section .card button#add {
+      display: block;
+      width: 100%;
+      padding: 10px 8px;
+      border: none;
+      margin-top: 20px;
+      font-size: 20px;
+      transition: all .3s ease;
+      box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+      color: #fff;
+      letter-spacing: 3px;
+      background: #37BDB2; }
+      @media screen and (max-width: 1024px) {
+        #pemesanan section .card button#add {
+          font-size: 14px; } }
+
+#menu header {
+  padding: 0;
+  padding-right: 30px; }
+  #menu header ul {
+    list-style: none; }
+    @media screen and (max-width: 1024px) {
+      #menu header ul {
+        float: right; } }
+    #menu header ul li {
+      display: inline-block; }
+      #menu header ul li a {
+        height: 100%;
+        display: block;
+        padding: 35px 40px;
+        color: #aaa;
+        font-size: 30px; }
+        @media screen and (max-width: 1024px) {
+          #menu header ul li a {
+            font-size: 15px;
+            padding: 10px 15px; } }
+        #menu header ul li a:hover {
+          background: #eee;
+          color: #37BDB2; }
+      #menu header ul li #hireme {
+        display: block;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        font-size: 15px;
+        border: none;
+        color: #37BDB2;
+        background: transparent;
+        border: 1px solid #37BDB2;
+        position: relative;
+        top: -5px; }
+        @media screen and (max-width: 1024px) {
+          #menu header ul li #hireme {
+            font-size: 12px;
+            padding: 5px 10px;
+            top: 0; } }
+        #menu header ul li #hireme:focus {
+          background: #37BDB2;
+          color: #fff; }
+#menu section h3 {
+  display: block;
+  background: #37BDB2;
+  padding: 10px 20px;
+  color: #fff; }
+  #menu section h3 i {
+    margin-right: 10px; }
+#menu section ul {
+  list-style: none;
+  padding: 10px;
+  margin-bottom: 10px; }
+  #menu section ul li {
+    display: block;
+    background: #fefefe;
+    border: 1px solid #ccc;
+    margin: 4px 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    overflow: hidden; }
+    #menu section ul li::after {
+      clear: both;
+      content: "";
+      display: table; }
+    #menu section ul li button {
+      float: left;
+      padding: 10px 20px;
+      margin-right: 15px;
+      border: none;
+      color: #fff;
+      font-size: 20px;
+      background: #06B042;
+      box-shadow: 0 1px 10px 0 #ccc; }
+      #menu section ul li button:focus {
+        background: #37BDB2; }
+    #menu section ul li .desc {
+      position: relative;
+      padding-top: 10px;
+      width: 80%;
+      float: left; }
+      @media screen and (max-width: 1024px) {
+        #menu section ul li .desc {
+          width: 70%; } }
+      #menu section ul li .desc span {
+        text-align: right;
+        font-size: 16px;
+        position: relative; }
+        #menu section ul li .desc span.price {
+          color: #00c33c;
+          position: absolute;
+          display: inline-block;
+          font-size: 16px;
+          right: 10px; }
+
+#daftar-pesanan section h3 {
+  position: relative;
+  box-shadow: 0 1px 1px 0 #ccc;
+  background: #37BDB2;
+  padding: 10px;
+  color: #fff;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align: center; }
+#daftar-pesanan section ul li {
+  padding: 0px 10px; }
+  #daftar-pesanan section ul li:nth-of-type(odd) .card {
+    border-right: 5px solid #E7F91C; }
+  #daftar-pesanan section ul li.edit .card {
+    max-height: 150px; }
+    #daftar-pesanan section ul li.edit .card .description .edit {
+      display: inline-block; }
+    #daftar-pesanan section ul li.edit .card .description .noedit {
+      display: none; }
+  #daftar-pesanan section ul li .card {
+    transition: all .2s ease;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    max-height: 100px;
+    overflow: hidden;
+    background: #fff;
+    border-right: 5px solid #fc109e;
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.3); }
+    #daftar-pesanan section ul li .card::after {
+      clear: both;
+      content: "";
+      display: table; }
+    #daftar-pesanan section ul li .card .image {
+      width: 30%;
+      float: left;
+      overflow: hidden; }
+      #daftar-pesanan section ul li .card .image img {
+        width: 140px;
+        filter: brightness(20); }
+    #daftar-pesanan section ul li .card .description {
+      width: 70%;
+      float: left;
+      padding: 15px 20px; }
+      #daftar-pesanan section ul li .card .description .edit {
+        display: none; }
+      #daftar-pesanan section ul li .card .description .noedit {
+        display: inline-block; }
+      #daftar-pesanan section ul li .card .description h4 {
+        color: #666; }
+        @media screen and (max-width: 1024px) {
+          #daftar-pesanan section ul li .card .description h4 {
+            font-size: 14px; } }
+      #daftar-pesanan section ul li .card .description p {
+        color: #999; }
+        @media screen and (max-width: 1024px) {
+          #daftar-pesanan section ul li .card .description p {
+            font-size: 10px; } }
+      #daftar-pesanan section ul li .card .description hr {
+        border: none;
+        border-bottom: 1px solid #eee;
+        margin: 5px 0; }
+      #daftar-pesanan section ul li .card .description input {
+        padding: 4px;
+        border: none;
+        color: #888;
+        font-weight: lighter;
+        box-shadow: 0 0 1px 0 #666;
+        width: 100%;
+        font-size: 12px;
+        display: block; }
+      #daftar-pesanan section ul li .card .description button {
+        margin-right: 5px;
+        padding: 3px 10px;
+        background: #eee;
+        color: #777;
+        border: 1px solid #ccc; }
+        #daftar-pesanan section ul li .card .description button:hover, #daftar-pesanan section ul li .card .description button:focus {
+          background: #37BDB2;
+          color: #fff;
+          border: none;
+          box-shadow: 0 1px 5px 0 #ccc; }
+        @media screen and (max-width: 1024px) {
+          #daftar-pesanan section ul li .card .description button {
+            padding: 3px 5px;
+            font-size: 12px; } }
+
+@media screen and (max-width: 773px) {
+  .column {
+    height: auto;
+    padding-top: 76px;
+    box-shadow: none; }
+    .column.four {
+      width: 100%; }
+
+  header {
+    display: none; }
+
+  section {
+    overflow: visible; }
+
+  #daftar-pesanan,
+  #menu,
+  #pemesanan {
+    display: none; }
+    #daftar-pesanan.show,
+    #menu.show,
+    #pemesanan.show {
+      display: block; }
+
+  #bar {
+    background: #fff;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    padding: 10px;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    padding-bottom: 8px;
+    position: fixed; }
+    #bar::after {
+      clear: both;
+      content: "";
+      display: table; }
+    #bar button {
+      border: none;
+      background: transparent;
+      display: inline-block;
+      font-size: 45px;
+      color: #555;
+      position: relative;
+      padding: 4px 10px;
+      margin-right: 15px;
+      border-radius: 6px;
+      float: left; }
+      #bar button:focus {
+        background: #f8f8f8; }
+    #bar h2.title {
+      margin-left: 20px;
+      font-size: 20px;
+      color: #777;
+      text-transform: uppercase;
+      position: relative;
+      display: inline-block;
+      float: left;
+      text-align: center;
+      margin-top: 13px; }
+
+  .overlay.open {
+    background: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.5;
+    z-index: 2; }
+
+  #slide {
+    display: block;
+    position: fixed;
+    z-index: 2000;
+    background: #fff;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 85%;
+    transform: translateX(-110%);
+    transition: all .3s ease-in;
+    box-shadow: 0 0 10px 1px #555; }
+    #slide.open {
+      box-shadow: none;
+      transform: translateX(0%); }
+    #slide button {
+      width: 20%;
+      display: block;
+      font-size: 40px;
+      padding: 10px;
+      border: none;
+      background: transparent; }
+      #slide button:focus {
+        color: #37BDB2;
+        background: #eee; }
+    #slide ul {
+      list-style-type: none; }
+      #slide ul li {
+        display: block; }
+        #slide ul li:first-child a {
+          border-top: 1px solid #eee; }
+        #slide ul li a {
+          padding: 25px;
+          padding-left: 50px;
+          display: block;
+          text-decoration: none;
+          color: #555;
+          font-size: 20px; }
+          #slide ul li a:focus, #slide ul li a:hover {
+            background: #37BDB2;
+            color: #fff; }
+          #slide ul li a i {
+            font-size: 25px;
+            margin-right: 20px; }
+
+  #pemesanan section {
+    padding: 30px 50px; }
+    #pemesanan section .card {
+      padding: 60pxk 40px; }
+      #pemesanan section .card h3 {
+        font-size: 35px; }
+      #pemesanan section .card p {
+        font-size: 20px; }
+      #pemesanan section .card .ion-pizza {
+        font-size: 80px; }
+      #pemesanan section .card .form {
+        padding: 10px 30px; }
+      #pemesanan section .card input {
+        margin: 40px 0;
+        font-size: 20px;
+        padding: 10px 10px;
+        color: #999; }
+      #pemesanan section .card button#add {
+        margin-top: 20px;
+        font-size: 20px; }
+
+  #menu ul li div.desc {
+    width: 85%; }
+
+  #daftar-pesanan section h3 {
+    padding: 20px;
+    font-size: 20px; }
+  #daftar-pesanan section ul li {
+    padding: 10px 20px; }
+    #daftar-pesanan section ul li.edit .card {
+      max-height: 200px; }
+    #daftar-pesanan section ul li .card {
+      height: 200px;
+      max-height: 200px; }
+      #daftar-pesanan section ul li .card .image {
+        width: 35%; }
+        #daftar-pesanan section ul li .card .image img {
+          width: 140%; }
+      #daftar-pesanan section ul li .card .description {
+        width: 64%; }
+        #daftar-pesanan section ul li .card .description h4 {
+          font-size: 25px; }
+        #daftar-pesanan section ul li .card .description p {
+          font-size: 20px; }
+        #daftar-pesanan section ul li .card .description input {
+          padding: 10px;
+          font-size: 15px; }
+        #daftar-pesanan section ul li .card .description button {
+          font-size: 16px;
+          padding: 6px 10px; } }
+@media screen and (max-width: 480px) {
+  #bar::after {
+    clear: both;
+    content: "";
+    display: table; }
+  #bar button {
+    display: inline-block;
+    font-size: 30px;
+    color: #555;
+    position: relative;
+    padding: 4px 10px;
+    margin-right: 15px;
+    border-radius: 6px;
+    float: left; }
+    #bar button:focus {
+      background: #f8f8f8; }
+  #bar h2.title {
+    margin-left: 15px;
+    font-size: 18px;
+    color: #777;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    margin-top: 9px; }
+
+  #slide button {
+    font-size: 30px;
+    padding-left: 20px;
+    padding-right: 20px; }
+  #slide ul li a {
+    padding: 16px;
+    padding-left: 40px;
+    font-size: 20px; }
+    #slide ul li a i {
+      font-size: 20px;
+      margin-right: 20px; }
+
+  .column {
+    padding-top: 60px; }
+
+  #pemesanan section {
+    padding: 10px; }
+    #pemesanan section .card {
+      padding: 30px 20px; }
+      #pemesanan section .card h3 {
+        font-size: 16px; }
+      #pemesanan section .card .ion-pizza {
+        font-size: 30px; }
+      #pemesanan section .card p {
+        font-size: 12px; }
+      #pemesanan section .card div.form {
+        padding: 2px 5px; }
+        #pemesanan section .card div.form input {
+          margin-top: 10px;
+          margin-bottom: 30px;
+          font-size: 12px; }
+        #pemesanan section .card div.form button#add {
+          font-size: 12px; }
+
+  #menu ul li div.desc {
+    width: 75%; }
+
+  #daftar-pesanan section h3 {
+    font-size: 15px;
+    padding: 10px; }
+  #daftar-pesanan section ul li {
+    padding: 4px;
+    padding-top: 0; }
+    #daftar-pesanan section ul li .card {
+      margin: 0;
+      max-height: 120px; }
+      #daftar-pesanan section ul li .card .description input {
+        margin: 3px 0; }
+      #daftar-pesanan section ul li .card .description h4 {
+        font-size: 18px; }
+      #daftar-pesanan section ul li .card .description p {
+        font-size: 15px; }
+      #daftar-pesanan section ul li .card .description button {
+        padding: 2px 4px; } }
+@media screen and (max-width: 360px) {
+  #daftar-pesanan section ul li .card .description h4 {
+    font-size: 14px; }
+    #daftar-pesanan section ul li .card .description h4 span {
+      display: block; }
+
+  #daftar-pesanan section ul li .card .description p {
+    font-size: 12px; } }
+@media screen and (max-width: 320px) {
+  #bar::after {
+    clear: both;
+    content: "";
+    display: table; }
+  #bar button {
+    display: inline-block;
+    font-size: 30px;
+    color: #555;
+    position: relative;
+    padding: 4px 10px;
+    margin-right: 15px;
+    border-radius: 6px;
+    float: left; }
+    #bar button:focus {
+      background: #f8f8f8; }
+  #bar h2.title {
+    margin-left: 15px;
+    font-size: 18px;
+    color: #777;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    margin-top: 9px; }
+
+  #slide button {
+    font-size: 30px;
+    padding-left: 20px;
+    padding-right: 20px; }
+  #slide ul li a {
+    padding: 10px;
+    padding-left: 40px;
+    font-size: 15px; }
+    #slide ul li a i {
+      font-size: 20px;
+      margin-right: 20px; }
+
+  .column {
+    padding-top: 60px; }
+
+  #pemesanan section {
+    padding: 10px; }
+    #pemesanan section .card {
+      padding: 30px 20px; }
+      #pemesanan section .card h3 {
+        font-size: 16px; }
+      #pemesanan section .card .ion-pizza {
+        font-size: 30px; }
+      #pemesanan section .card p {
+        font-size: 12px; }
+      #pemesanan section .card div.form {
+        padding: 2px 5px; }
+        #pemesanan section .card div.form input {
+          margin-top: 10px;
+          margin-bottom: 30px;
+          font-size: 12px; }
+        #pemesanan section .card div.form button#add {
+          font-size: 12px; }
+
+  #menu ul li div.desc {
+    width: 75%; }
+
+  #daftar-pesanan section h3 {
+    font-size: 15px;
+    padding: 10px; }
+  #daftar-pesanan section ul li {
+    padding: 10px;
+    padding-top: 0; }
+    #daftar-pesanan section ul li.edit .card {
+      max-height: none; }
+    #daftar-pesanan section ul li .card {
+      transition: all .3s ease;
+      box-shadow: 0 1px 4px 0 #ccc;
+      margin: 0;
+      height: auto;
+      max-height: none;
+      border-radius: 0; }
+      #daftar-pesanan section ul li .card .image {
+        width: 100%;
+        height: 150px; }
+        #daftar-pesanan section ul li .card .image img {
+          width: 100%; }
+      #daftar-pesanan section ul li .card .description {
+        width: 100%; }
+        #daftar-pesanan section ul li .card .description input {
+          margin: 3px 0; }
+        #daftar-pesanan section ul li .card .description h4 {
+          font-size: 18px; }
+        #daftar-pesanan section ul li .card .description p {
+          font-size: 15px; }
+        #daftar-pesanan section ul li .card .description button {
+          padding: 2px 4px; } }
+
+/*# sourceMappingURL=main.css.map */

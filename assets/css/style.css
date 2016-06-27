@@ -1,0 +1,761 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Tw Cen Mt'; }
+
+button, a:focus {
+  outline: none; }
+
+body {
+  background: #f8f8f8; }
+
+.container:after {
+  content: "";
+  clear: both;
+  display: block; }
+
+nav#bar, div#slide, div.overlay {
+  display: none; }
+  @media screen and (max-width: 360px) {
+    nav#bar, div#slide, div.overlay {
+      display: block; } }
+  @media screen and (max-width: 480px) {
+    nav#bar, div#slide, div.overlay {
+      display: block; } }
+  @media screen and (max-width: 773px) {
+    nav#bar, div#slide, div.overlay {
+      display: block; } }
+
+.column {
+  overflow: hidden;
+  float: left;
+  box-shadow: 0 1px 1px 0 #ccc;
+  height: 100vh; }
+  @media screen and (max-width: 773px) {
+    .column {
+      height: auto;
+      padding-top: 100px; } }
+  @media screen and (max-width: 480px) {
+    .column {
+      height: auto;
+      padding-top: 100px; } }
+  @media screen and (max-width: 360px) {
+    .column {
+      height: auto;
+      padding-top: 100px; } }
+  .column.one {
+    width: 8.3333333%; }
+  .column.two {
+    width: 16.666666%; }
+  .column.three {
+    width: 25%; }
+  .column.four {
+    width: 33.333333%; }
+    @media screen and (max-width: 773px) {
+      .column.four {
+        width: 100%; } }
+    @media screen and (max-width: 480px) {
+      .column.four {
+        width: 100%; } }
+    @media screen and (max-width: 360px) {
+      .column.four {
+        width: 100%; } }
+  .column.five {
+    width: 41.66667%; }
+  .column.six {
+    width: 50%; }
+  .column header {
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 1px 1px 0 #ccc;
+    padding: 10px;
+    padding-left: 50px;
+    z-index: 1000;
+    position: relative; }
+    @media screen and (max-width: 773px) {
+      .column header {
+        display: none; } }
+    @media screen and (max-width: 480px) {
+      .column header {
+        display: none; } }
+    @media screen and (max-width: 360px) {
+      .column header {
+        display: none; } }
+    .column header h2 i {
+      margin-right: 10px; }
+    .column header p {
+      color: #999; }
+
+#menu {
+  padding: 0; }
+  #menu header {
+    padding: 0; }
+    #menu header ul {
+      list-style: none; }
+      #menu header ul li {
+        display: inline-block; }
+        #menu header ul li:last-child {
+          text-align: center;
+          padding: 10px; }
+        #menu header ul li #hireme {
+          display: block;
+          text-transform: uppercase;
+          padding: 10px 20px;
+          font-size: 15px;
+          border: none;
+          color: #37BDB2;
+          background: transparent;
+          border: 1px solid #37BDB2;
+          position: relative;
+          top: -5px; }
+          #menu header ul li #hireme:focus {
+            outline: none;
+            background: #37BDB2;
+            color: #fff; }
+        #menu header ul li a {
+          height: 100%;
+          display: block;
+          padding: 35px 40px;
+          color: #aaa; }
+          #menu header ul li a i {
+            font-size: 30px; }
+          #menu header ul li a:hover {
+            background: #eee;
+            color: #37bdb2; }
+
+#daftar-pesanan header {
+  box-shadow: 0 0 1px 0 #ccc; }
+#daftar-pesanan section h3 {
+  position: relative;
+  box-shadow: 0 1px 1px 0 #ccc;
+  background: #0ddac8;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase; }
+  @media screen and (max-width: 773px) {
+    #daftar-pesanan section h3 {
+      padding: 20px; } }
+#daftar-pesanan section {
+  height: 84%;
+  overflow-y: scroll; }
+  @media screen and (max-width: 480px) {
+    #daftar-pesanan section {
+      overflow-y: visible; } }
+#daftar-pesanan ul {
+  overflow-y: visible;
+  height: auto; }
+  @media screen and (max-width: 773px) {
+    #daftar-pesanan ul {
+      height: auto;
+      overflow-y: visible; } }
+  @media screen and (max-width: 480px) {
+    #daftar-pesanan ul {
+      overflow-y: visible;
+      height: auto; } }
+  @media screen and (max-width: 360px) {
+    #daftar-pesanan ul {
+      overflow-y: visible;
+      height: auto; } }
+#daftar-pesanan ul li {
+  padding: 10px; }
+  #daftar-pesanan ul li .description .edit {
+    display: none; }
+  #daftar-pesanan ul li .description .noedit {
+    display: inline-block; }
+  @media screen and (max-width: 773px) {
+    #daftar-pesanan ul li.edit .card {
+      max-height: 200px; } }
+  @media screen and (max-width: 480px) {
+    #daftar-pesanan ul li.edit .card {
+      max-height: 160px; } }
+  @media screen and (max-width: 360px) {
+    #daftar-pesanan ul li.edit .card {
+      max-height: 150px; } }
+  #daftar-pesanan ul li.edit .description .edit {
+    display: inline-block; }
+  #daftar-pesanan ul li.edit .description .noedit {
+    display: none; }
+  #daftar-pesanan ul li .card {
+    transition: all .2s ease-in;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    overflow: hidden;
+    max-height: 100px;
+    background: #fff;
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.2);
+    border-right: 5px solid #fc109e; }
+    @media screen and (max-width: 773px) {
+      #daftar-pesanan ul li .card {
+        max-height: 150px; } }
+    @media screen and (max-width: 480px) {
+      #daftar-pesanan ul li .card {
+        max-height: 120px; } }
+    @media screen and (max-width: 360px) {
+      #daftar-pesanan ul li .card {
+        max-height: 100px; } }
+    #daftar-pesanan ul li .card:after {
+      content: "";
+      clear: both;
+      display: block; }
+    #daftar-pesanan ul li .card .image {
+      width: 30%;
+      overflow: hidden;
+      float: left; }
+      @media screen and (max-width: 773px) {
+        #daftar-pesanan ul li .card .image {
+          width: 35%; } }
+      #daftar-pesanan ul li .card .image img {
+        width: 140%;
+        filter: brightness(20); }
+    #daftar-pesanan ul li .card .description {
+      width: 70%;
+      float: left;
+      padding: 15px 20px; }
+      @media screen and (max-width: 773px) {
+        #daftar-pesanan ul li .card .description {
+          width: 65%; } }
+      @media screen and (max-width: 360px) {
+        #daftar-pesanan ul li .card .description {
+          padding: 10px;
+          padding-left: 15px; } }
+      #daftar-pesanan ul li .card .description h4 {
+        color: #555; }
+        @media screen and (max-width: 773px) {
+          #daftar-pesanan ul li .card .description h4 {
+            font-size: 18px; } }
+        @media screen and (max-width: 480px) {
+          #daftar-pesanan ul li .card .description h4 {
+            font-size: 16px; } }
+        @media screen and (max-width: 360px) {
+          #daftar-pesanan ul li .card .description h4 {
+            font-size: 15px; } }
+      #daftar-pesanan ul li .card .description p {
+        color: #999;
+        font-family: 'Segoe Ui'; }
+        @media screen and (max-width: 773px) {
+          #daftar-pesanan ul li .card .description p {
+            font-size: 20px; } }
+        @media screen and (max-width: 480px) {
+          #daftar-pesanan ul li .card .description p {
+            font-size: 14px; } }
+        @media screen and (max-width: 360px) {
+          #daftar-pesanan ul li .card .description p {
+            font-size: 13px; } }
+      #daftar-pesanan ul li .card .description hr {
+        border: none;
+        margin: 5px 0;
+        border-bottom: 1px solid #eee; }
+      #daftar-pesanan ul li .card .description input {
+        padding: 4px;
+        border: 1px solid #ccc;
+        width: 50%;
+        border-radius: 3px; }
+        @media screen and (max-width: 773px) {
+          #daftar-pesanan ul li .card .description input {
+            width: 100%;
+            padding: 10px; } }
+        @media screen and (max-width: 480px) {
+          #daftar-pesanan ul li .card .description input {
+            width: 100%;
+            margin-bottom: 3px;
+            padding: 4px; } }
+        @media screen and (max-width: 360px) {
+          #daftar-pesanan ul li .card .description input {
+            width: 100%; } }
+      #daftar-pesanan ul li .card .description button {
+        margin-right: 5px;
+        padding: 3px 10px;
+        background: #eee;
+        color: #777;
+        border: 1px solid #ccc; }
+        @media screen and (max-width: 773px) {
+          #daftar-pesanan ul li .card .description button {
+            padding: 6px 10px; } }
+        @media screen and (max-width: 480px) {
+          #daftar-pesanan ul li .card .description button {
+            padding: 3px 10px; } }
+
+#pemesanan section {
+  padding: 10px; }
+  @media screen and (max-width: 773px) {
+    #pemesanan section {
+      padding: 30px 50px;
+      padding-top: 50px; } }
+  @media screen and (max-width: 480px) {
+    #pemesanan section {
+      padding: 15px 20px; } }
+  @media screen and (max-width: 360px) {
+    #pemesanan section {
+      padding: 10px; } }
+  #pemesanan section .card {
+    background: #fff;
+    box-shadow: 0 1px 1px 0 #ccc;
+    padding: 30px 35px;
+    margin: 5px 0;
+    margin-bottom: 20px; }
+    @media screen and (max-width: 773px) {
+      #pemesanan section .card {
+        padding: 60px 40px;
+        padding-top: 60px; } }
+    @media screen and (max-width: 480px) {
+      #pemesanan section .card {
+        padding: 30px 20px;
+        padding-top: 30px; } }
+    #pemesanan section .card h3 {
+      text-transform: uppercase;
+      text-align: center;
+      color: #666;
+      letter-spacing: 4px; }
+      @media screen and (max-width: 773px) {
+        #pemesanan section .card h3 {
+          font-size: 35px; } }
+      @media screen and (max-width: 480px) {
+        #pemesanan section .card h3 {
+          font-size: 25px; } }
+      @media screen and (max-width: 360px) {
+        #pemesanan section .card h3 {
+          font-size: 20px; } }
+    #pemesanan section .card p {
+      text-align: center;
+      color: #999; }
+    #pemesanan section .card .ion-pizza {
+      margin-top: 10px;
+      font-size: 50px;
+      text-align: center;
+      display: block;
+      color: #999; }
+    #pemesanan section .card div.form {
+      padding-top: 10px;
+      padding-bottom: 10px; }
+    #pemesanan section .card input, #pemesanan section .card button {
+      display: block;
+      padding: 10px 8px;
+      margin: 10px 0;
+      width: 100%;
+      border: none;
+      font-size: 20px;
+      box-shadow: 0 1px 0 0 #ccc;
+      transition: all .3s ease; }
+      #pemesanan section .card input:focus, #pemesanan section .card button:focus {
+        outline: none;
+        box-shadow: 0 2px 0 0 #37bdb2; }
+    #pemesanan section .card button#add {
+      margin-top: 20px;
+      margin-bottom: 0;
+      box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3);
+      color: #fff;
+      letter-spacing: 3px;
+      background: #37BDB2; }
+
+#menu section {
+  height: 84%;
+  box-shadow: none;
+  overflow-y: scroll;
+  padding-bottom: 100px; }
+  @media screen and (max-width: 773px) {
+    #menu section {
+      padding-top: 75px;
+      padding-bottom: 0;
+      overflow-y: visible;
+      height: auto; } }
+  @media screen and (max-width: 480px) {
+    #menu section {
+      padding-top: 60px;
+      padding-bottom: 0;
+      overflow-y: visible;
+      height: auto; } }
+  @media screen and (max-width: 360px) {
+    #menu section {
+      padding-top: 60px;
+      padding-bottom: 0;
+      overflow-y: visible;
+      height: auto; } }
+  #menu section h3 {
+    display: block;
+    background: #21a0bb;
+    color: #fff;
+    padding: 10px 20px; }
+    @media screen and (max-width: 773px) {
+      #menu section h3 {
+        padding: 20px; } }
+    @media screen and (max-width: 480px) {
+      #menu section h3 {
+        padding: 10px 20px; } }
+    #menu section h3 i {
+      margin-right: 10px; }
+  #menu section ul {
+    list-style: none;
+    padding: 10px;
+    margin-bottom: 10px; }
+    #menu section ul li {
+      display: block;
+      background: #fefefe;
+      border: 1px solid #ccc;
+      margin: 4px 0;
+      color: #aaa;
+      border-radius: 4px;
+      font-size: 10px; }
+      #menu section ul li:after {
+        content: "";
+        clear: both;
+        display: block; }
+      #menu section ul li button {
+        float: left;
+        padding: 10px 20px;
+        margin-right: 15px;
+        border: none;
+        color: #fff;
+        font-size: 20px;
+        background: #eee;
+        border-right: 1px solid #ccc;
+        color: #888;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px; }
+        #menu section ul li button:focus {
+          background: #ddd; }
+      #menu section ul li div.desc {
+        position: relative;
+        padding-top: 10px;
+        width: 75%;
+        float: left; }
+        #menu section ul li div.desc span {
+          text-align: right;
+          font-size: 16px;
+          position: relative; }
+        #menu section ul li div.desc span.price {
+          text-align: right;
+          display: inline-block;
+          color: #00c33c;
+          font-size: 16px;
+          right: 10px;
+          position: absolute; }
+
+datalist#makanan option {
+  color: #eee; }
+
+@keyframes bubble {
+  from {
+    letter-spacing: 0px; }
+  to {
+    letter-spacing: 5px; } }
+div.loading {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #999; }
+  div.loading p {
+    display: block;
+    animation: bubble .3s infinite alternate; }
+
+@media screen and (max-width: 773px) {
+  .column {
+    padding-top: 76px;
+    box-shadow: none; }
+
+  #daftar-pesanan, #menu, #pemesanan {
+    display: none; }
+    #daftar-pesanan.show, #menu.show, #pemesanan.show {
+      display: block; }
+
+  nav#bar {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    padding-bottom: 8px; }
+    nav#bar:after {
+      content: "";
+      clear: both;
+      display: block; }
+    nav#bar button {
+      border: none;
+      background: transparent;
+      display: inline-block;
+      font-size: 45px;
+      border-radius: 6px;
+      margin-left: 15px;
+      color: #555;
+      position: relative;
+      padding: 4px 10px; }
+      nav#bar button:focus {
+        outline: none;
+        background: #f8f8f8; }
+    nav#bar h2.title {
+      margin-left: 20px;
+      font-size: 20px;
+      color: #555;
+      text-transform: uppercase;
+      position: relative;
+      display: inline-block;
+      top: -11px; }
+
+  .overlay {
+    content: ""; }
+    .overlay.open {
+      background: #333;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0.5;
+      z-index: 1900; }
+
+  div#slide {
+    position: fixed;
+    z-index: 2000;
+    background: #fff;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 85%;
+    box-shadow: 0 0 10px 1px #555;
+    transform: translateX(-110%);
+    transition: all .3s ease-in; }
+    div#slide.open {
+      box-shadow: none;
+      transform: translateX(0%); }
+    div#slide button {
+      width: 20%;
+      display: block;
+      font-size: 40px;
+      padding: 10px;
+      padding-left: 10px;
+      border: none;
+      background: transparent; }
+      div#slide button:focus {
+        background: #eee;
+        color: #20c3b0; }
+    div#slide ul {
+      list-style: none; }
+      div#slide ul li {
+        display: block; }
+        div#slide ul li:first-child a {
+          border-top: 1px solid #eee; }
+        div#slide ul li a {
+          padding: 25px;
+          padding-left: 50px;
+          display: block;
+          text-decoration: none;
+          color: #555;
+          font-size: 20px;
+          border-bottom: 1px solid #fafafa; }
+          div#slide ul li a:focus, div#slide ul li a:hover {
+            background: #61e4fb; }
+          div#slide ul li a i {
+            font-size: 25px;
+            margin-right: 20px; } }
+@media screen and (max-width: 480px) {
+  .column {
+    padding-top: 60px;
+    box-shadow: none; }
+
+  #daftar-pesanan, #menu, #pemesanan {
+    display: none; }
+    #daftar-pesanan.show, #menu.show, #pemesanan.show {
+      display: block; }
+
+  nav#bar {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    padding-bottom: 8px; }
+    nav#bar:after {
+      content: "";
+      clear: both;
+      display: block; }
+    nav#bar button {
+      border: none;
+      background: transparent;
+      display: inline-block;
+      font-size: 30px;
+      border-radius: 6px;
+      margin-left: 15px;
+      color: #555;
+      position: relative;
+      padding: 4px 10px; }
+      nav#bar button:focus {
+        outline: none;
+        background: #f8f8f8; }
+    nav#bar h2.title {
+      margin-left: 20px;
+      font-size: 20px;
+      color: #555;
+      text-transform: uppercase;
+      position: relative;
+      display: inline-block;
+      top: -4px; } }
+    @media screen and (max-width: 480px) and (max-width: 360px) {
+      nav#bar h2.title {
+        margin-left: 10px; } }
+
+@media screen and (max-width: 480px) {
+  .overlay {
+    content: ""; }
+    .overlay.open {
+      background: #333;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0.5;
+      z-index: 1900; }
+
+  div#slide {
+    position: fixed;
+    z-index: 2000;
+    background: #fff;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 85%;
+    box-shadow: 0 0 10px 1px #555;
+    transform: translateX(-110%);
+    transition: all .3s ease-in; }
+    div#slide.open {
+      box-shadow: none;
+      transform: translateX(0%); }
+    div#slide button {
+      width: 30%;
+      display: block;
+      font-size: 25px;
+      padding: 10px;
+      padding-left: 10px;
+      border: none;
+      background: transparent; }
+    div#slide ul {
+      list-style: none; }
+      div#slide ul li {
+        display: block; }
+        div#slide ul li:first-child a {
+          border-top: 1px solid #eee; }
+        div#slide ul li a {
+          padding: 15px;
+          padding-left: 30px;
+          display: block;
+          text-decoration: none;
+          color: #555;
+          border-bottom: 1px solid #fafafa; }
+          div#slide ul li a:focus, div#slide ul li a:hover {
+            background: #61e4fb; }
+          div#slide ul li a i {
+            font-size: 20px;
+            margin-right: 20px; } }
+@media screen and (max-width: 360px) {
+  .column {
+    padding-top: 60px; }
+
+  #daftar-pesanan, #menu, #pemesanan {
+    display: none; }
+    #daftar-pesanan.show, #menu.show, #pemesanan.show {
+      display: block; }
+
+  nav#bar {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    padding-bottom: 8px; }
+    nav#bar:after {
+      content: "";
+      clear: both;
+      display: block; }
+    nav#bar button {
+      border: none;
+      background: transparent;
+      display: inline-block;
+      font-size: 30px;
+      border-radius: 6px;
+      margin-left: 15px;
+      color: #555;
+      position: relative;
+      padding: 4px 10px; }
+      nav#bar button:focus {
+        outline: none;
+        background: #f8f8f8; }
+    nav#bar h2.title {
+      margin-left: 20px;
+      font-size: 20px;
+      color: #555;
+      text-transform: uppercase;
+      position: relative;
+      display: inline-block;
+      top: -4px; } }
+    @media screen and (max-width: 360px) and (max-width: 360px) {
+      nav#bar h2.title {
+        margin-left: 10px; } }
+
+@media screen and (max-width: 360px) {
+  .overlay {
+    content: ""; }
+    .overlay.open {
+      background: #333;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0.5;
+      z-index: 1900; }
+
+  div#slide {
+    position: fixed;
+    z-index: 2000;
+    background: #fff;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 85%;
+    box-shadow: 0 0 10px 1px #555;
+    transform: translateX(-110%);
+    transition: all .3s ease-in; }
+    div#slide.open {
+      box-shadow: none;
+      transform: translateX(0%); }
+    div#slide button {
+      width: 30%;
+      display: block;
+      font-size: 25px;
+      padding: 10px;
+      padding-left: 10px;
+      border: none;
+      background: transparent; }
+    div#slide ul {
+      list-style: none; }
+      div#slide ul li {
+        display: block; }
+        div#slide ul li:first-child a {
+          border-top: 1px solid #eee; }
+        div#slide ul li a {
+          padding: 15px;
+          padding-left: 30px;
+          display: block;
+          text-decoration: none;
+          color: #555;
+          border-bottom: 1px solid #fafafa; }
+          div#slide ul li a:focus, div#slide ul li a:hover {
+            background: #61e4fb; }
+          div#slide ul li a i {
+            font-size: 20px;
+            margin-right: 20px; } }
+
+/*# sourceMappingURL=style.css.map */
