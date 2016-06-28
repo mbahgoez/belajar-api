@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'sekolah_bagol',
+	'hostname' => 'mysql.idhostinger.com',
+	'username' => 'u945120114_data',
+	'password' => 'bagoes48bagoes48',
+	'database' => 'u945120114_data',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
