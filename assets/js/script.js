@@ -17,22 +17,22 @@ function getSize() {
     console.log($header1.innerHeight());
 }
 
-var meta = [
-    '<meta name="description" content="lorem ipsum dolor sit amet">',
-    '<meta name="keyword" content="a,b,c,d,ef,g">',
-    '<meta name="author" content="Deni Pratama">',
-    '<meta name="image" content="aa.jpg">'
-];
+// var meta = [
+        //     '<meta name="description" content="lorem ipsum dolor sit amet">',
+        //     '<meta name="keyword" content="a,b,c,d,ef,g">',
+        //     '<meta name="author" content="Deni Pratama">',
+        //     '<meta name="image" content="aa.jpg">'
+        // ];
 
-metaTag(meta);
+        // metaTag(meta);
 
-function metaTag() {
-    $title = $("head title");
+        // function metaTag() {
+        //     $title = $("head title");
 
-    for (var i = 0; i <= meta.length; i++) {
-        $title.before(meta[i]);
-    }
-}
+        //     for (var i = 0; i <= meta.length; i++) {
+        //         $title.before(meta[i]);
+        //     }
+        // }
 
 var headerEqual = function() {
     $header1 = $("#daftar-pesanan").find("header");
