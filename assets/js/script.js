@@ -1,5 +1,5 @@
 // Config
-host = "localhost";
+host = "pusatdata.tk";
 $btnAdd = $("button#add");
 page = "#pemesanan";
 title = "PESAN MAKANAN";
@@ -188,7 +188,7 @@ $.ajax({
 
 // GET AJAX REQUEST
 $.ajax({
-    url: 'http://' + host + '/rest/api/pesan',
+    url: 'http://' + host + '/api/pesan',
     type: 'GET',
     beforeSend: function() {
         $("#list-pesanan-menunggu").prepend("<div class='loading'><p>Loading...</p></div>");
@@ -205,7 +205,7 @@ $.ajax({
 // POST REQUEST AJAX
 var Post = function($data) {
     $.ajax({
-        url: 'http://' + host + '/rest/api/pesan',
+        url: 'http://' + host + '/api/pesan',
         type: 'POST',
         data: JSON.stringify($data),
         beforeSend: function() {
@@ -263,7 +263,7 @@ $("#list-pesanan-menunggu").delegate(".btn-save", "click", function() {
         };
 
         $.ajax({
-            url: "http://" + host + "/rest/api/pesan/" + dataid,
+            url: "http://" + host + "/api/pesan/" + dataid,
             type: "PUT",
             data: JSON.stringify(updateObj),
             beforeSend: function() {
@@ -295,7 +295,7 @@ $("#list-pesanan-menunggu").delegate(".btn-delete", "click", function() {
 
     if (c === true) {
         $.ajax({
-            url: "http://" + host + "/rest/api/pesan/" + $dataid,
+            url: "http://" + host + "/api/pesan/" + $dataid,
             type: "DELETE",
             success: function() {
                 $li.fadeOut(300, function() {
